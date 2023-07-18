@@ -1,93 +1,87 @@
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
     background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     text-align: center;
-    color: #333;
+    margin-top: 0;
 }
 
 form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 label {
     display: block;
-    font-weight: bold;
-    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 input[type="text"],
-input[type="number"],
 textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 14px;
-}
-
-button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-button[type="submit"] {
-    background-color: #008CBA;
-}
-
-#inputContainer {
     margin-bottom: 10px;
 }
 
-.owner {
-    margin-bottom: 5px;
-    padding: 10px;
-    border-radius: 4px;
-    background-color: #f9f9f9;
-}
-
-.owner input[type="text"],
-.owner input[type="number"] {
-    width: 45%;
-    margin-right: 5px;
-}
-
-.owner div {
-    display: flex;
-}
-
-.owner button {
-    margin-left: 5px;
-}
-
-.add-field-button,
-.remove-field-button {
-    margin-top: 10px;
-    padding: 5px 10px;
-    background-color: #ccc;
+button {
+    background-color: #4CAF50;
     color: #fff;
+    padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 12px;
-    transition: background-color 0.3s ease;
 }
 
-.add-field-button:hover,
-.remove-field-button:hover {
-    background-color: #999;
+button[type="submit"] {
+    background-color: #007bff;
+}
+
+button[type="button"] {
+    background-color: #dc3545;
+}
+
+.owner {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.owner-fields {
+    margin-bottom: 10px;
+}
+
+.owner-fields label {
+    display: inline-block;
+    width: 120px;
+}
+
+.owner:last-child {
+    margin-bottom: 0;
+}
+
+.remove-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.error-message {
+    color: #dc3545;
+    margin-bottom: 10px;
 }
