@@ -1,27 +1,26 @@
-function addOwner() {
-    const ownersDiv = document.getElementById('owners');
+function addInputField() {
+    var container = document.getElementById("inputContainer");
+    var inputDiv = document.createElement("div");
 
-    const ownerDiv = document.createElement('div');
-    ownerDiv.className = 'owner';
+    var ownerNameInput = document.createElement("input");
+    ownerNameInput.type = "text";
+    ownerNameInput.name = "ownerName[]";
+    ownerNameInput.placeholder = "Owner's Name";
 
-    const nameLabel = document.createElement('label');
-    nameLabel.textContent = 'Имя владельца:';
-    const nameInput = document.createElement('input');
-    nameInput.type = 'text';
-    nameInput.name = 'owner_name[]';
-    nameInput.required = true;
+    var ownerAgeInput = document.createElement("input");
+    ownerAgeInput.type = "number";
+    ownerAgeInput.name = "ownerAge[]";
+    ownerAgeInput.placeholder = "Owner's Age";
 
-    const ageLabel = document.createElement('label');
-    ageLabel.textContent = 'Возраст владельца:';
-    const ageInput = document.createElement('input');
-    ageInput.type = 'text';
-    ageInput.name = 'owner_age[]';
-    ageInput.required = true;
+    inputDiv.appendChild(ownerNameInput);
+    inputDiv.appendChild(ownerAgeInput);
+    container.appendChild(inputDiv);
+}
 
-    ownerDiv.appendChild(nameLabel);
-    ownerDiv.appendChild(nameInput);
-    ownerDiv.appendChild(ageLabel);
-    ownerDiv.appendChild(ageInput);
-
-    ownersDiv.appendChild(ownerDiv);
+function removeInputField() {
+    var container = document.getElementById("inputContainer");
+    var inputDivs = container.getElementsByTagName("div");
+    if (inputDivs.length > 1) {
+        container.removeChild(inputDivs[inputDivs.length - 1]);
+    }
 }
