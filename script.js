@@ -1,13 +1,13 @@
-function addInputField() {
-    var container = document.getElementById("inputContainer");
-    var inputDiv = document.createElement("div");
+function addOwner() {
+    const container = document.getElementById("inputContainer");
+    const inputDiv = document.createElement("div");
 
-    var ownerNameInput = document.createElement("input");
+    const ownerNameInput = document.createElement("input");
     ownerNameInput.type = "text";
     ownerNameInput.name = "ownerName[]";
     ownerNameInput.placeholder = "Owner's Name";
 
-    var ownerAgeInput = document.createElement("input");
+    const ownerAgeInput = document.createElement("input");
     ownerAgeInput.type = "number";
     ownerAgeInput.name = "ownerAge[]";
     ownerAgeInput.placeholder = "Owner's Age";
@@ -17,9 +17,9 @@ function addInputField() {
     container.appendChild(inputDiv);
 }
 
-function removeInputField() {
-    var container = document.getElementById("inputContainer");
-    var inputDivs = container.getElementsByTagName("div");
+function removeOwner() {
+    const container = document.getElementById("inputContainer");
+    const inputDivs = container.getElementsByTagName("div");
     if (inputDivs.length > 1) {
         container.removeChild(inputDivs[inputDivs.length - 1]);
     }
